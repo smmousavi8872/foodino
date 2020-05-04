@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/pureWhite"
+  android:fitsSystemWindows="true"
+  android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+  <com.google.android.material.appbar.CollapsingToolbarLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:contentScrim="?attr/colorPrimary"
+    app:expandedTitleTextAppearance="@android:color/transparent"
+    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+    <include
+      android:id="@+id/frProdcutDetailSlider"
+      layout="@layout/layout_product_detail_image_slider"
+      android:layout_width="match_parent"
+      android:layout_height="320dp"
+      app:layout_collapseMode="parallax" />
+
+    <!--<androidx.appcompat.widget.AppCompatImageView
+      android:layout_width="match_parent"
+      android:layout_height="280dp"
+      android:layout_marginTop="?attr/actionBarSize"
+      app:layout_collapseMode="parallax"
+      app:srcCompat="@drawable/firework" />-->
+
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/productDetailParallaxToolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:layout_gravity="top"
+      app:layout_collapseMode="pin"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+      <include layout="@layout/layout_toolbar_product_detail" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+  </com.google.android.material.appbar.CollapsingToolbarLayout>
+</com.google.android.material.appbar.AppBarLayout>

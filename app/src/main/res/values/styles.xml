@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:listDivider">@color/milkyWhite</item>
+    <item name="android:fontFamily">@font/iran_sans</item>
+    <item name="android:windowActivityTransitions" tools:ignore="NewApi">true</item>
+  </style>
+
+  <style name="ActionButton" parent="@android:style/Widget.ActionButton">
+    <item name="android:drawablePadding">@dimen/action_button_padding</item>
+  </style>
+
+  <style name="tabLayoutTextStyle" parent="TextAppearance.Design.Tab">
+    <item name="android:textSize">18sp</item>
+  </style>
+
+  <style name="colorControlHighlight_blue">
+    <item name="colorControlHighlight">@color/lightGray</item>
+  </style>
+
+  <style name="greenCheckBoxStyle" parent="Base.Theme.AppCompat">
+    <item name="colorAccent">@color/primaryGreen</item>
+    <item name="android:textColor">@color/middleGray</item>
+    <item name="android:textColorSecondary">@color/middleGray</item>
+  </style>
+
+  <style name="blueCheckBoxStyle" parent="Base.Theme.AppCompat">
+    <item name="colorAccent">@color/primaryBule</item>
+    <item name="android:textColor">@color/middleGray</item>
+    <item name="android:textColorSecondary">@color/middleGray</item>
+  </style>
+
+  <style name="greenEditTextStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorPrimary">@color/middleGray</item>
+    <item name="colorPrimaryDark">@color/primaryGreen</item>
+    <item name="colorAccent">@color/primaryGreen</item>
+  </style>
+
+  <style name="blueEditTextStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorPrimary">@color/middleGray</item>
+    <item name="colorPrimaryDark">@color/primaryBule</item>
+    <item name="colorAccent">@color/primaryBule</item>
+  </style>
+
+  <style name="greenTextInputLayoutStyle" parent="@style/TextAppearance.AppCompat">
+    <item name="android:textColor">@color/primaryGreen</item>
+  </style>
+
+  <style name="blueTextInputLayoutStyle" parent="@style/TextAppearance.AppCompat">
+    <item name="android:textColor">@color/primaryBule</item>
+  </style>
+
+  <style name="whiteMaterialButtom" parent="Widget.MaterialComponents.Button">
+    <item name="colorPrimary">@color/pureWhite</item>
+    <item name="colorPrimaryDark">@color/pureWhite</item>
+    <item name="colorAccent">@color/pureWhite</item>
+
+  </style>
+
+</resources>

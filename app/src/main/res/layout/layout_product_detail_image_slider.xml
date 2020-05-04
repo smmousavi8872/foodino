@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/flMainFragmentSlider"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <com.smarteist.autoimageslider.SliderView
+    android:id="@+id/productDetailSlider"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    app:sliderAnimationDuration="350"
+    app:sliderCircularHandlerEnabled="true"
+    app:sliderIndicatorAnimationDuration="400"
+    app:sliderIndicatorGravity="center_horizontal|bottom"
+    app:sliderIndicatorMargin="8dp"
+    app:sliderIndicatorOrientation="horizontal"
+    app:sliderIndicatorPadding="4dp"
+    app:sliderIndicatorRadius="1dp"
+    app:sliderIndicatorSelectedColor="@color/primary"
+    app:sliderIndicatorUnselectedColor="@color/milkyWhite" />
+
+</FrameLayout>

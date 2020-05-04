@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/colorPrimary"
+  android:gravity="start"
+  android:orientation="vertical"
+  android:paddingLeft="@dimen/activity_horizontal_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  android:paddingRight="@dimen/activity_horizontal_margin"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+  <LinearLayout
+    android:id="@+id/llNavbarUserInfoContainers"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNavbarUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+
+        android:text="محسن موسوی"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:paddingTop="4dp"
+        android:text="@string/signin_comma"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="@string/navbarHeaderWelcome"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/imgNavbarUserProPic"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/nav_header_vertical_spacing"
+      android:src="@android:drawable/sym_def_app_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/nav_header_vertical_spacing"
+      android:text="@string/signin_dear_user"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+  </LinearLayout>
+
+  <RelativeLayout
+    android:id="@+id/rlNavbarSigninContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="48dp"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/imgNavbarSignUpIcon"
+      android:layout_width="20dp"
+      android:layout_height="20dp"
+      android:layout_centerVertical="true"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      app:srcCompat="@drawable/ic_user_24dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/txtNavbarSignUpButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_toEndOf="@id/imgNavbarSignUpIcon"
+      android:background="@drawable/bg_navbar_signup_button"
+      android:clickable="true"
+      android:focusable="true"
+      android:foreground="?attr/selectableItemBackgroundBorderless"
+      android:paddingLeft="12dp"
+      android:paddingTop="4dp"
+      android:paddingRight="12dp"
+      android:paddingBottom="4dp"
+      android:text="@string/singin_and_signup"
+      android:textColor="#fff" />
+
+  </RelativeLayout>
+
+</LinearLayout>

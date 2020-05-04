@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  tools:context=".fragments.signinsignup.SignInFragment">
+
+  <View
+    android:id="@+id/viewSignUpInDigishopUnderline"
+    android:layout_width="wrap_content"
+    android:layout_height="1dp"
+    android:layout_below="@id/txtSignUpInDigishop"
+    android:layout_alignStart="@id/txtSignUpInDigishop"
+    android:layout_alignEnd="@id/txtSignUpInDigishop"
+    android:layout_marginTop="-10dp"
+    android:background="@color/primaryGreen" />
+
+  <View
+    android:id="@+id/viewForgotPasswordUnderline"
+    android:layout_width="wrap_content"
+    android:layout_height="1dp"
+    android:layout_below="@id/txtForgotPassword"
+    android:layout_alignStart="@id/txtForgotPassword"
+    android:layout_alignEnd="@id/txtForgotPassword"
+    android:layout_marginTop="-10dp"
+    android:background="@color/lightGray" />
+
+  <androidx.appcompat.widget.AppCompatCheckBox
+    android:id="@+id/chkShowPassword"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/inpSignInUserPasswordContainer"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="32dp"
+    android:layout_marginBottom="8dp"
+    android:layoutDirection="rtl"
+    android:text="@string/remembser_me"
+    android:textColor="@color/middleGray"
+    android:theme="@style/blueCheckBoxStyle" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/txtSignUpInDigishop"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/txtForgotPassword"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="8dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:text="@string/registerInDigishop"
+    android:textColor="@color/primaryGreen"
+    android:textSize="16dp" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/txtForgotPassword"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/chkShowPassword"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:text="@string/userLoginForgotPassword"
+
+    android:textColor="@color/lightGray"
+    android:textSize="16dp" />
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/cvFinalizeShop"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_alignParentBottom="true"
+    android:background="@color/primaryGreen"
+    android:imeOptions="actionSend|flagNoEnterAction">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:layout_gravity="center_horizontal"
+      android:background="@color/primaryBule"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:padding="8dp">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgFinalizeShopIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/ic_navigation_next_white" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtFinalizeShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in_to_digishop"
+        android:textColor="@color/pureWhite"
+        android:textSize="19dp" />
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/inpSignInUserEmailContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:hint="@string/userLoginEmailOrMobile"
+    android:layoutDirection="rtl"
+    app:errorEnabled="true"
+    app:hintTextAppearance="@style/blueTextInputLayoutStyle">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/edtSignInUserEmail"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="32dp"
+      android:drawableStart="@drawable/ic_email_gray_24dp"
+      android:inputType="textEmailAddress"
+      android:paddingTop="16dp"
+      android:textColor="@color/lightNavyBlue"
+      android:textDirection="rtl"
+      android:textSize="15dp"
+      android:theme="@style/blueEditTextStyle" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/inpSignInUserPasswordContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/inpSignInUserEmailContainer"
+    android:hint="@string/userLoginPassword"
+    android:layoutDirection="rtl"
+    app:errorEnabled="true"
+    app:hintTextAppearance="@style/blueTextInputLayoutStyle"
+    app:passwordToggleEnabled="true">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/edtSignInUserpassword"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="32dp"
+      android:drawableStart="@drawable/ic_lock_gray_24dp"
+      android:inputType="textPassword"
+      android:textColor="@color/lightNavyBlue"
+      android:textDirection="rtl"
+      android:textSize="15dp"
+      android:theme="@style/blueEditTextStyle" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".fragments.chatbottomsheet.ChatBottomSheetFargment">
+
+  <!-- TODO: Update blank fragment layout -->
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/txtChatWithSupportTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/iran_sans_bold"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:text="چت با پشتیبانی"
+    android:textSize="17dp" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/imgCloseChat"
+    android:layout_width="38dp"
+    android:layout_height="38dp"
+    android:alpha=".5"
+    android:padding="8dp"
+    app:srcCompat="@drawable/ic_close_black_24dp" />
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/txtChatWithSupportTitle">
+
+    <ListView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+  </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

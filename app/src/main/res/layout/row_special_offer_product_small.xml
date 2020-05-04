@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:clickable="true"
+  android:focusable="true"
+  android:foreground="?attr/selectableItemBackgroundBorderless"
+  android:layoutDirection="rtl">
+
+  <androidx.cardview.widget.CardView
+    android:layout_width="193dp"
+    android:layout_height="0dp"
+    android:layout_margin="4dp"
+    android:layoutDirection="rtl"
+    android:scaleType="centerCrop"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintDimensionRatio="H,1:1.5"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgProductPreviewImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="W,1:1.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtProductPreviewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        android:text="دستمال کاغذی 100 برگ ایزی پیک بسته 100 عددی"
+        android:textColor="@color/pureBlack"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@+id/imgProductPreviewImage" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="0.75dp"
+        android:background="@color/lightGray"
+        app:layout_constraintTop_toBottomOf="@id/txtProductPreviewTitle"
+        tools:layout_editor_absoluteX="16dp" />
+
+      <LinearLayout
+        android:id="@+id/llMainPriceContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtProductPreviewTitle">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/txtProductMainPrice"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_strike_line"
+          android:gravity="end"
+          android:text="15000"
+          android:textColor="@color/colorPrimary"
+          android:textSize="14sp"
+          app:layout_goneMarginTop="2dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/txtTomanRed"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/bg_strike_line"
+          android:gravity="end"
+          android:text="تومان"
+          android:textColor="@color/colorPrimary"
+          android:textSize="14sp"
+          app:layout_constraintBottom_toBottomOf="@id/txtProductMainPrice"
+          app:layout_constraintBottom_toTopOf="@id/txtTomanGreen"
+          app:layout_constraintEnd_toStartOf="@id/txtProductMainPrice"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/txtProductPreviewTitle" />
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/llDiscountPriceContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llMainPriceContainer">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/txtProductDiscountPrice"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="4dp"
+          android:text="14600"
+          android:textColor="@color/primaryGreen"
+          android:textSize="16sp"
+          app:layout_constraintBottom_toBottomOf="@id/txtTomanGreen"
+          app:layout_constraintStart_toEndOf="@id/txtTomanGreen"
+          app:layout_constraintTop_toBottomOf="@id/txtTomanRed" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/txtTomanGreen"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="تومان"
+          android:textColor="@color/primaryGreen"
+          android:textSize="16sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/txtTomanRed"
+          app:layout_constraintTop_toTopOf="@id/txtProductDiscountPrice" />
+      </LinearLayout>
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtProductFinished"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="تمام شد!"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llDiscountPriceContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

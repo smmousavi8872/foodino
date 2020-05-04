@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layoutDirection="rtl"
+  android:orientation="vertical"
+  tools:context=".fragments.mapsearch.MapSearchFragment">
+
+
+
+  <com.google.android.material.card.MaterialCardView
+    android:id="@+id/cvSearchMap"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSearchBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:alpha=".6"
+        android:padding="8dp"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+      <androidx.appcompat.widget.SearchView
+        android:id="@+id/svSearchMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/imgSearchBack"
+        android:hint="@string/hint_search_map"
+        android:layoutDirection="rtl"
+        android:textColor="@color/darkerGray"
+        android:textSize="20dp" />
+
+      <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/prgSearchMap"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@id/imgSearchBack"
+        app:loading_color="@color/darkGray"
+        app:loading_width="1dp" />
+
+    </RelativeLayout>
+
+  </com.google.android.material.card.MaterialCardView>
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvSearchResult"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
+    app:layout_constraintTop_toBottomOf="@id/cvSearchMap" />
+
+</LinearLayout>

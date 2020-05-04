@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/coorlProductDetailParentLayout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <com.victor.loading.rotate.RotateLoading
+    android:id="@+id/prgProductDetail"
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:layout_gravity="center"
+    app:loading_color="@color/colorPrimary"
+    app:loading_width="3dp" />
+
+  <include
+    android:id="@+id/appBarProductDetailHeader"
+    layout="@layout/layout_product_detail_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="invisible" />
+
+  <LinearLayout
+    android:id="@+id/llErrorConnectionContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:alpha=".7"
+      android:padding="8dp"
+      app:srcCompat="@drawable/ic_retry_orange" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:alpha=".7"
+      android:text="@string/error_in_connection"
+      android:textSize="18dp" />
+  </LinearLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:id="@+id/srlProductDetailInfoContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="fill_vertical"
+    android:clipToPadding="false"
+    android:minHeight="192dp"
+    android:overScrollMode="ifContentScrolls"
+    android:visibility="invisible"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+      android:id="@+id/llProductDetailContetnContainer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="2.1dp"
+        android:background="@color/lighterGray" />
+
+      <include layout="@layout/layout_product_detail_panel" />
+
+      <include
+        layout="@layout/layout_product_detail_buttoms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" />
+
+      <include
+        layout="@layout/layout_product_detail_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+      <include
+        layout="@layout/layout_product_detail_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginRight="16dp" />
+
+      <include
+        layout="@layout/layout_product_detail_explaination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp" />
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvParentCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

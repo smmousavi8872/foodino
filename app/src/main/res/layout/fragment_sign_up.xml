@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+  tools:context=".fragments.signinsignup.SignUpFragment">
+
+  <androidx.appcompat.widget.AppCompatCheckBox
+    android:id="@+id/chkReceiveMagazine"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/inpSignUpUserPasswordContainer"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="32dp"
+    android:layout_marginBottom="8dp"
+    android:layoutDirection="rtl"
+    android:text="@string/want_to_receive_digishop_magazine"
+    android:textColor="@color/middleGray"
+    android:theme="@style/greenCheckBoxStyle" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="16dp"
+    android:gravity="center_horizontal"
+    android:text="@string/signed_up_with_email_in_before"
+    android:textColor="@color/middleGray" />
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/cvDoneRegisterInDigishop"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_alignParentBottom="true"
+    android:background="@color/primaryGreen"
+    android:imeOptions="actionSend|flagNoEnterAction">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:layout_gravity="center_horizontal"
+      android:background="@color/primaryGreen"
+      android:gravity="center"
+      android:orientation="horizontal"
+      android:padding="8dp">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgDoneRegisterIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@drawable/ic_navigation_next_white" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtDoneSignUpInDigishop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_in_digishop"
+        android:textColor="@color/pureWhite"
+        android:textSize="19dp" />
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/inpSignUpUserEmailContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="64dp"
+    android:hint="@string/userLoginEmailOrMobile"
+    android:layoutDirection="rtl"
+    app:errorEnabled="true"
+    app:hintTextAppearance="@style/greenTextInputLayoutStyle">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/edtSignUpUserEmail"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="32dp"
+      android:drawableStart="@drawable/ic_email_gray_24dp"
+      android:inputType="textEmailAddress"
+      android:paddingTop="16dp"
+      android:textSize="15dp"
+      android:textColor="@color/lightNavyBlue"
+      android:textDirection="rtl"
+      android:theme="@style/greenEditTextStyle" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/inpSignUpUserPasswordContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/inpSignUpUserEmailContainer"
+    android:hint="@string/userLoginPassword"
+    android:layoutDirection="rtl"
+    app:errorEnabled="true"
+    app:hintTextAppearance="@style/greenTextInputLayoutStyle"
+    app:passwordToggleEnabled="true">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/edtSignUpUserPassword"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="15dp"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="32dp"
+      android:drawableStart="@drawable/ic_lock_gray_24dp"
+      android:textColor="@color/lightNavyBlue"
+      android:textDirection="rtl"
+      android:theme="@style/greenEditTextStyle" />
+  </com.google.android.material.textfield.TextInputLayout>
+</RelativeLayout>

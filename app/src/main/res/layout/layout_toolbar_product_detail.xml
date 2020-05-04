@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:elevation="4dp"
+    android:id="@+id/imgToolbarNavbarButton"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true"
+    android:layout_marginEnd="8dp"
+    android:autoMirrored="true"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="6dp"
+    app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:elevation="4dp"
+    android:id="@+id/imgToolbarMoreOptions"
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_centerVertical="true"
+    android:layout_marginStart="-6dp"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="6dp"
+    app:srcCompat="@drawable/ic_more_vert_white_24dp" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:elevation="4dp"
+    android:id="@+id/imgToolbarShoppingBasket"
+    android:layout_width="42dp"
+    android:layout_height="42dp"
+    android:layout_centerVertical="true"
+    android:layout_marginStart="16dp"
+    android:layout_toEndOf="@id/imgToolbarMoreOptions"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="8dp"
+    app:srcCompat="@drawable/ic_shopping_cart_white_24dp" />
+
+  <include
+    android:id="@+id/includeShopCountBadge"
+    layout="@layout/view_circle_badge_white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@id/imgToolbarShoppingBasket"
+    android:layout_alignEnd="@id/imgToolbarShoppingBasket"
+    android:layout_marginEnd="2dp" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/txtToolbarTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="26dp"
+    android:layout_centerVertical="true"
+    android:layout_toStartOf="@+id/imgToolbarNavbarButton"
+    android:paddingStart="16dp"
+    android:paddingEnd="24dp"
+    android:textColor="@color/pureWhite"
+    android:textSize="18dp"
+    android:visibility="gone"
+    tools:text="لیست دسته بندی ها" />
+
+</RelativeLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/milkyWhite"
+  android:orientation="vertical"
+  tools:context=".fragments.specialoffers.SpecialOffersFragment">
+
+  <include
+    android:id="@+id/speicalOfferToolbar"
+    layout="@layout/layout_special_offers_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+  <com.google.android.material.card.MaterialCardView
+    android:id="@+id/cvFilterAndSortContainer"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_below="@id/speicalOfferToolbar"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/milkyWhite"
+      android:orientation="horizontal">
+
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/imgImageThumbnail"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+          android:layout_gravity="center"
+          android:scaleType="centerCrop"
+          app:srcCompat="@drawable/ic_receipt_grey600_24dp" />
+
+      </com.google.android.material.card.MaterialCardView>
+
+
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/imgImageThumbnail2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,1:3.75"
+        app:layout_constraintEnd_toStartOf="@id/imgImageThumbnail3"
+        app:layout_constraintStart_toEndOf="@id/imgImageThumbnail"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="?attr/selectableItemBackgroundBorderless"
+          android:clickable="true"
+          android:focusable="true"
+          android:gravity="center"
+          android:orientation="horizontal">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/iran_sans_bold"
+              android:text="مرتب سازی"
+              android:textColor="@color/darkerGray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="پرفروش ترین"
+              android:textColor="@color/subtitleColor"
+              android:textSize="10sp" />
+
+          </LinearLayout>
+
+          <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4dp"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_filter_list_check_grey600_24dp" />
+
+        </LinearLayout>
+
+      </com.google.android.material.card.MaterialCardView>
+
+
+      <com.google.android.material.card.MaterialCardView
+        android:id="@+id/imgImageThumbnail3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,1:3.75"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgImageThumbnail2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="?attr/selectableItemBackgroundBorderless"
+          android:clickable="true"
+          android:focusable="true"
+          android:gravity="center"
+          android:orientation="horizontal">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:fontFamily="@font/iran_sans_bold"
+              android:text="فیلتر کردن"
+              android:textColor="@color/darkerGray" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="رنگ نوع قیمت و ..."
+              android:textColor="@color/subtitleColor"
+              android:textSize="10sp" />
+
+          </LinearLayout>
+
+          <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4dp"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_filter_list_check_grey600_24dp" />
+
+        </LinearLayout>
+
+      </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </com.google.android.material.card.MaterialCardView>
+
+  <com.victor.loading.rotate.RotateLoading
+    android:id="@+id/prgSpecialProductLoading"
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:layout_centerInParent="true"
+    app:loading_color="@color/colorPrimary"
+    app:loading_width="3dp" />
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvSpecialOffersProducts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/cvFilterAndSortContainer"
+    android:padding="4dp"
+    tools:listitem="@layout/row_special_offer_product_small" />
+
+
+</RelativeLayout>

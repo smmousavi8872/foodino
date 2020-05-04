@@ -1,0 +1,65 @@
+<resources>
+  <string name="app_name">Foodino</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="navbarMenuHome">خانه</string>
+  <string name="navbarMenuProductCatList">لیست دسته بندی غذاها</string>
+  <string name="navbarMenuShoppingBasket">سبد خرید</string>
+  <string name="navbarMenuSpecialOffer">پیشنهاد ویژه فودینو</string>
+  <string name="navbarMenuMostSoled">پرفروش ترین‌ها</string>
+  <string name="navbarMenuMostSeen">پربازدیدترین‌ها</string>
+  <string name="navbarMenuNewest">جدیدترین‌ها</string>
+  <string name="navbarMenuSettings">تنظیمات</string>
+  <string name="navbarMenuMap">نقشه</string>
+  <string name="navbarMenuFrequentQuestions">سوالات متداول</string>
+  <string name="navbarMenuAboutUs">درباره ما</string>
+  <string name="navbarHeaderWelcome">خوش آمدید</string>
+  <string name="special_offer_suggestion_text">پیشنهاد</string>
+  <string name="special_offer_incredible_text">شگفت انگیز</string>
+  <string name="seller_name">فروشنده :</string>
+  <string name="gurantee_name">گارانتی :</string>
+  <string name="product_number">تعداد :</string>
+  <string name="main_price">قیمت کل</string>
+  <string name="toman">تومان</string>
+  <string name="incredible_discount_name">(-) تخفیف شگفت انگیز</string>
+  <string name="final_price_name">قیمت نهایی</string>
+  <string name="remove_product_name">حذف</string>
+  <string name="your_shopping_basket">سبد خرید شما</string>
+  <string name="sum_of_shop">جمع کل خرید</string>
+  <string name="finilize_your_shop">خرید خود را نهایی کنید</string>
+  <string name="your_shopping_basket_is_empty">سبد خرید شما خالی است!</string>
+  <string name="alertDialogPositiveButton">بله</string>
+  <string name="alertDialogNegetiveButtonText">خیر</string>
+  <string name="removePorductAlertTitle">حذف سفارش</string>
+  <string name="removeProductAlertMessage">آیا از حذف %1$s  اطمینان دارید؟</string>
+  <string name="emptyBasketAlertTitle">خالی کردن سبد</string>
+  <string name="emptyBasketAlertMessage">آیا مایل به حذف تمامی سفارشات از سبد خریدتان هستید؟</string>
+  <string name="signin_enter">ورود</string>
+  <string name="signin_dear_user">کاربر گرامی،</string>
+  <string name="singin_and_signup">ورود و ثبت نام</string>
+  <string name="signin_comma">،</string>
+  <string name="registerInDigishop">ثبت نام در فودینو</string>
+  <string name="userLoginEmailOrMobile">شماره موبایل یا ایمیل</string>
+  <string name="userLoginPassword">کلمه عبور</string>
+  <string name="userLoginForgotPassword">کلمه عبورم را فراموش کرده‌ام!</string>
+  <string name="sign_up_in_digishop">ثبت نام در فودینو</string>
+  <string name="signed_up_with_email_in_before">اگر قبلا با ایمیل ثبت‌نام کرده‌اید، نیاز به ثبت‌نام مجدد با شماره همراه ندارید</string>
+  <string name="remembser_me">مرا به خاطر بسپار</string>
+  <string name="sign_in_to_digishop">ورود به فودینو</string>
+  <string name="want_to_receive_digishop_magazine">مایل به دریافت خبرنامه فودینو هستم</string>
+  <string name="toolbar_signin">ورود</string>
+  <string name="toolbar_signup">ثبت نام</string>
+  <string name="might_like_following_products">احتمالا به غذاهای زیر علاقه‌مند باشید</string>
+  <string name="color_count">%1$d  رنگ</string>
+  <string name="color_title">رنگ</string>
+
+  <string name="warningText">داستان بلند به گونه‌ای از داستان‌ها گفته می‌شود که خصوصیات رمان و داستان کوتاه را هر دو در خود داشته باشد. در داستان بلند درست مانند داستان کوتاه معنا از اهمیت بالایی برخوردار بوده و فشردگی معنایی وجود دارد.</string>
+  <string name="expandableText"> شترها را خواباندند، بارهای تجارتی را از پشت شترها می گشودند، به شترهاعلف و خوراک می دادند، همگی کنار گودال کوچک و کم عمق آب حلقه وار گردمی آمدند و هر کس سفره غذایی را که همراه آورده بود باز می کرد و برای خوردن وتجدید قوا در میان می گذاشت، اما روزبه. . . .
+
+آیا این جوان چگونه فکر می کرده است؟ آخر او در خانواده اصیل وآبرومند «فروخ » در کمال ناز و نعمت زندگی می کرده، مسافرت بیابانی نکرده و خستگی و رنج را ندیده است، بی خوابی نکشیده و شترسواری نکرده است و الان شاید غذایی هم در سفره ندارد، که لااقل رفع گرسنگی کند! اما استقامت روحی وی بیش از اینها بود که، در اثر اندک گرفتاری سست گشته و از مقصدخود منصرف شود، زیرا با اطمینان، عقیده داشت که، برای رسیدن به آرمان و الا و بلند، قطعا مشکلات طاقت فرسایی سد راه می شود، می دانست که گل وریحان چیدن، خار به ست خلیدن دارد و ناگزیر باید صبر و بردباری را پیشه ساخت و با موانع و مشکلات جنگید تا سرانجام به آستان مقصود رسید.کاروان شام فاصله دور و دراز بین ایران و شام را می پیمود، روزها که اشعه طلایی آفتاب شلاق وار به سینه تپه ها می خورد و حرارت آفتاب شدت می یافت، در نتیجه دامنه صاف و هموار بیابان به جهنم سوزانی مبدل می گشت، آن وقتی که پیکرکاروانیان زیر قطرات گرم و تعب بار عرق رنج می برد، و خلاصه هنگامی که تراکم فشار هوای سوزان قافله را از رفتن باز می داشت، جلودار قافله همراهان را کنارگودال آبی که درخت سبزی بر سر آن روئیده بود و به قسمتی از آن سایه می افکند، ومعمولا هر کاروانی در آنجا برای صرف غذا و رفع خستگی توقف می کرد، راهنمایی نمود.</string>
+  <string name="error_in_connection">خطا در برقراری ارتباط با سرور</string>
+  <string name="hint_search_map">نشانی، آدرس، نام محل و ...</string>
+  <string name="hint_search_here">اینجا جستوجو کنید</string>
+
+</resources>

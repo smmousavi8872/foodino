@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_marginLeft="-2dp"
+  android:layout_marginTop="-4dp"
+  android:layout_marginRight="-2dp"
+  app:cardBackgroundColor="#FAFAFA"
+  app:cardElevation="2dp"
+  app:cardPreventCornerOverlap="false"
+  app:cardUseCompatPadding="true">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="2dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        app:srcCompat="@drawable/ic_share_dark_light_24dp" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        app:srcCompat="@drawable/ic_favorite_light_gray_24dp" />
+
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        app:srcCompat="@drawable/ic_notif_light_gray_24dp" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/txtProductDetailTitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:maxLines="2"
+      android:paddingStart="16dp"
+      android:paddingTop="4dp"
+      android:paddingEnd="16dp"
+      android:paddingBottom="4dp"
+      android:text="هدفون بی سیم شیائومی مدل به همراه پک و جعبه Earbuds Basic"
+      android:textColor="@color/pureBlack"
+      android:textSize="17dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/txtProductDetailSubtitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:paddingStart="16dp"
+      android:paddingEnd="16dp"
+      android:paddingBottom="16dp"
+      android:text="هدفون بی سیم شیائومی مدل Earbuds Basic"
+      android:textColor="@color/subtitleColor"
+      android:textSize="16dp" />
+
+    <include
+      android:id="@+id/llSpecialOfferLayout"
+      layout="@layout/layout_special_offer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="16dp" />
+  </LinearLayout>
+
+</androidx.cardview.widget.CardView>

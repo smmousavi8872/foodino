@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  app:cardElevation="4dp"
+  app:cardUseCompatPadding="true">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:layoutDirection="rtl"
+      android:orientation="horizontal">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="start"
+        android:text="@string/color_title"
+        android:textColor="@color/pureBlack"
+        android:textSize="18dp" />
+
+      <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="8" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtColorCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="end"
+        android:text="@string/color_count"
+        android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="72dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="16dp"
+      android:layoutDirection="rtl"
+      android:orientation="horizontal">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        app:srcCompat="@drawable/ic_warranty_24dp" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="گارانتی 18 ماهه دیجی سرویس"
+        android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/view_gray_line_separetor" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="16dp"
+      android:layoutDirection="rtl"
+      android:orientation="horizontal">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        app:srcCompat="@drawable/ic_shop_24dp" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="فروش توسط دیجی لند پلاس"
+        android:textSize="16dp" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="|"
+        android:textSize="16dp" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="رضایت خرید: 83%"
+        android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="8dp"
+      android:layoutDirection="rtl"
+      android:orientation="horizontal">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        app:srcCompat="@drawable/ic_delievery_car_gray_24dp" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="آماده ارسال از انبار دیجی‌کالا"
+        android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/view_gray_line_separetor" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="16dp">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تومان"
+        android:textColor="@color/primaryGreen"
+        android:textSize="24dp" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtPriceWithDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/iran_yekan_reqular_mobile_fa_num"
+        android:text="190,000"
+        android:textColor="@color/primaryGreen"
+        android:textSize="22dp" />
+
+      <LinearLayout
+        android:id="@+id/llProductDtailMainPriceContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="تومان"
+          android:textColor="@color/primary"
+          android:textSize="18dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/txtMainPrice"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="4dp"
+          android:layout_marginEnd="8dp"
+          android:fontFamily="@font/iran_yekan_reqular_mobile_fa_num"
+          android:text="190,000"
+          android:textColor="@color/primary"
+          android:textSize="17dp" />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnAddToShoppingBasket"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="12dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="8dp"
+      android:backgroundTint="@color/primaryGreen"
+      android:layoutDirection="rtl"
+      android:padding="8dp"
+      android:text="افزودن به سبد خرید"
+      android:textSize="22dp"
+      app:cornerRadius="2dp"
+      app:icon="@drawable/ic_add_shopping_cart_2_white_36dp"
+      app:iconGravity="textStart"
+      app:iconSize="32dp" />
+
+    <include layout="@layout/view_gray_line_separetor" />
+
+    <LinearLayout
+      android:id="@+id/llSellersCountContainer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="8dp"
+      android:layoutDirection="rtl"
+      android:orientation="horizontal"
+      android:paddingTop="8dp"
+      android:paddingBottom="8dp">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        app:srcCompat="@drawable/ic_shop_24dp" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="%1$d فروشنده و گارانتی برای این غذا وجود دارد"
+        android:textColor="@color/primaryBule"
+        android:textSize="16dp" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="4dp"
+        app:srcCompat="@drawable/ic_next_24dp" />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

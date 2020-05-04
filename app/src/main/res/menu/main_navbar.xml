@@ -1,0 +1,65 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <group
+    android:id="@+id/navMenuHeaderContiane"
+    android:checkableBehavior="single">
+    <item
+      android:id="@+id/navbarMenuHome"
+      android:icon="@drawable/ic_home_black_24dp"
+      android:title="@string/navbarMenuHome" />
+    <item
+      android:id="@+id/navbarMenuCatList"
+      android:icon="@drawable/ic_list_black_24dp"
+      android:title="@string/navbarMenuProductCatList" />
+
+  </group>
+
+  <group
+    android:id="@+id/navbarMenuBuyBasketContianer"
+    android:checkableBehavior="single">
+    <item
+      android:id="@+id/navbarMenuShoppingBasket"
+      android:icon="@drawable/ic_shopping_cart_black_24dp"
+      android:title="@string/navbarMenuShoppingBasket" />
+  </group>
+
+  <group
+    android:id="@+id/navbarMenuSpecialsContainer"
+    android:checkableBehavior="single">
+    <item
+      android:id="@+id/navbarMenuSpecialOffer"
+      android:icon="@drawable/ic_star_1"
+      android:title="@string/navbarMenuSpecialOffer" />
+    <item
+      android:id="@+id/navbarMenuMostSold"
+      android:icon="@drawable/ic_star_1"
+      android:title="@string/navbarMenuMostSoled" />
+    <item
+      android:id="@+id/navbarMenuMostSeen"
+      android:icon="@drawable/ic_star_1"
+      android:title="@string/navbarMenuMostSeen" />
+    <item
+      android:id="@+id/navbarMenuNewest"
+      android:icon="@drawable/ic_star_1"
+      android:title="@string/navbarMenuNewest" />
+  </group>
+
+  <group
+    android:id="@+id/navbarMenuAboutContainer"
+    android:checkableBehavior="single">
+    <item
+      android:id="@+id/navbarMenuSettings"
+      android:icon="@drawable/ic_settings_24dp"
+      android:title="@string/navbarMenuSettings" />
+    <item
+      android:id="@+id/navbarMenuFrequentQuestions"
+      android:icon="@drawable/ic_map_black_24dp"
+      android:title="@string/navbarMenuMap" />
+    <item
+      android:id="@+id/navbarMenuAboutUs"
+      android:icon="@drawable/ic_fo_menu"
+      android:title="@string/navbarMenuAboutUs" />
+  </group>
+
+
+</menu>
