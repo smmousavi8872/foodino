@@ -1,5 +1,7 @@
 package com.developer.smmousavi.foodino.fragments.shoppingbasket;
 
+import android.app.Application;
+
 import com.developer.smmousavi.foodino.base.BaseViewModel;
 import com.developer.smmousavi.foodino.models.Recipe;
 import com.developer.smmousavi.foodino.repositories.ShoppingBasketRepository;
@@ -15,7 +17,8 @@ public class ShoppingBasketFragmentViewModel extends BaseViewModel {
     private ShoppingBasketRepository mShoppingBasketRepository;
 
     @Inject
-    public ShoppingBasketFragmentViewModel() {
+    public ShoppingBasketFragmentViewModel(Application app){
+        super(app);
         mShoppingBasketRepository = ShoppingBasketRepository.getInstance();
     }
 

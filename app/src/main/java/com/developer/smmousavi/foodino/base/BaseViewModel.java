@@ -1,6 +1,12 @@
 package com.developer.smmousavi.foodino.base;
 
-import androidx.lifecycle.ViewModel;
+import android.app.Application;
 
-public class BaseViewModel extends ViewModel {
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+
+public class BaseViewModel extends AndroidViewModel {
+    public BaseViewModel(@NonNull Application application) {
+        super(application);
+    }
 }

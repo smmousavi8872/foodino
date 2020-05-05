@@ -1,61 +1,37 @@
 package com.developer.smmousavi.foodino.fragments.specialoffers;
 
+import android.app.Application;
 import android.util.Log;
 
 import com.developer.smmousavi.foodino.activities.specialoffers.SpecialOffersActivity;
 import com.developer.smmousavi.foodino.base.BaseViewModel;
 import com.developer.smmousavi.foodino.models.Recipe;
-import com.developer.smmousavi.foodino.repositories.SpecialRecipeRepoitory;
-import com.developer.smmousavi.foodino.network.util.NetworkState;
+import com.developer.smmousavi.foodino.network.util.Resource;
+import com.developer.smmousavi.foodino.repositories.SpecialRecipeRepository;
 
 import java.util.List;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 import javax.inject.Inject;
 
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.paging.PagedList;
 
 import static com.developer.smmousavi.foodino.fragments.productdetail.ProductDetailFragment.TAG;
 
 public class SpecialOffersFragmentViewModel extends BaseViewModel {
 
-    private Executor executor;
-    private LiveData<NetworkState> networkState;
-    private LiveData<PagedList<Recipe>> articleLiveData;
-    private SpecialRecipeRepoitory mSpecialRecipeRepository;
+    private SpecialRecipeRepository mSpecialRecipeRepository;
+    private MediatorLiveData<Resource<List<Recipe>>> recipesMLD = new MediatorLiveData<>();
 
     @Inject
-    public SpecialOffersFragmentViewModel() {
-        mSpecialRecipeRepository = SpecialRecipeRepoitory.getInstance();
+    public SpecialOffersFragmentViewModel(Application app) {
+        super(app);
+        mSpecialRecipeRepository = SpecialRecipeRepository.getInstance(app);
     }
 
-    /*
-     * Step 1: We are initializing an Executor class
-     * Step 2: We are getting an instance of the DataSourceFactory class
-     * Step 3: We are initializing the network state liveData as well.
-     *         This will update the UI on the network changes that take place
-     *         For instance, when the data is getting fetched, we would need
-     *         to display a loader and when data fetching is completed, we
-     *         should hide the loader.
-     * Step 4: We need to configure the PagedList.Config.
-     * Step 5: We are initializing the pageList using the config we created
-     *         in Step 4 and the DataSourceFactory we created from Step 2
-     *         and the executor we initialized from Step 1.
-     */
-
-      private void init() {
-        executor = Executors.newFixedThreadPool(5);
-    }
-
-    public void getSpecialRecipes(String query, int page) {
-        mSpecialRecipeRepository.getSpecialRecipes(query, page);
-    }
-
-    public MutableLiveData<List<Recipe>> getSpecialRecipesLd() {
-        return mSpecialRecipeRepository.getSpecialRecipesLd();
+    public MediatorLiveData<Resource<List<Recipe>>> getSpecialRecipesMLD() {
+        return recipesMLD;
     }
 
     public void searchNextPage() {
@@ -77,23 +53,31 @@ public class SpecialOffersFragmentViewModel extends BaseViewModel {
         switch (offerType) {
             //TODO: newestApi
             case NEWEST:
-                mSpecialRecipeRepository.getSpecialRecipes("chicken", 1);
+                searchRecipesApi("Chicken", 1);
                 break;
             //TODO:mostSeenApi
             case MOST_SEEN:
-                mSpecialRecipeRepository.getSpecialRecipes("beef", 1);
+                searchRecipesApi("beef", 1);
                 break;
             //TODO: mostSoldApi
             case MOST_SOLD:
-                mSpecialRecipeRepository.getSpecialRecipes("chips", 1);
+                searchRecipesApi("chips", 1);
                 break;
             //TODO: specialOfferApi
             case SPECIAL_OFFER:
-                mSpecialRecipeRepository.getSpecialRecipes("pasta", 1);
+                searchRecipesApi("pasta", 1);
                 break;
         }
     }
 
-    public void clear() {
+    public void searchRecipesApi(String query, int pageNumber) {
+        final LiveData<Resource<List<Recipe>>> repoSource = mSpecialRecipeRepository.getSpecialRecipes(query, pageNumber);
+        recipesMLD.addSource(repoSource, listResource -> {
+            //onChange
+
+            //react to the data
+            recipesMLD.setValue(listResource);
+
+        });
     }
 }

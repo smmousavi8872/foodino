@@ -1,5 +1,6 @@
 package com.developer.smmousavi.foodino.fragments.mapsearch;
 
+import android.app.Application;
 import android.util.Log;
 
 import com.developer.smmousavi.foodino.base.BaseViewModel;
@@ -21,7 +22,8 @@ public class MapSearchFragmentViewModel extends BaseViewModel {
     private MapSearchRepository mMapSearchRepo;
 
     @Inject
-    public MapSearchFragmentViewModel(MapSearchRestApi mapSearchRestApi) {
+    public MapSearchFragmentViewModel(Application app, MapSearchRestApi mapSearchRestApi) {
+        super(app);
         mMapSearchRepo = MapSearchRepository.getInstance();
         if (mapSearchRestApi == null)
             Log.i(TAG, "MapSearchFragmentViewModel: mapSearchRestApi is null");

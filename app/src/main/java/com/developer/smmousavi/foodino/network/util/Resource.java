@@ -11,16 +11,16 @@ public class Resource<T> {
     }
 
     @NonNull
-    public final Status mStatus;
+    public final Status status;
     @Nullable
-    final T mData;
+    public final T data;
     @Nullable
-    final String mMessage;
+    public final String message;
 
     public Resource(@NonNull Status status, @Nullable T data, @Nullable String message) {
-        mStatus = status;
-        mData = data;
-        mMessage = message;
+        this.status = status;
+        this.data = data;
+        this.message = message;
     }
 
     public static <T> Resource<T> success(@NonNull T data) {

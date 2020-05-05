@@ -16,6 +16,7 @@ import com.developer.smmousavi.foodino.adapters.specialoffers.SpecialOffersRvAda
 import com.developer.smmousavi.foodino.factory.viewmodel.ViewModelProviderFactory;
 import com.developer.smmousavi.foodino.fragments.base.BaseDaggerFragment;
 import com.developer.smmousavi.foodino.helper.RecyclerViewHelper;
+import com.developer.smmousavi.foodino.util.Testing;
 import com.victor.loading.rotate.RotateLoading;
 
 import javax.inject.Inject;
@@ -150,14 +151,21 @@ public class SpecialOffersFragment extends BaseDaggerFragment {
     }
 
     protected void subscribeObserver() {
-        mViewModel.getSpecialRecipesLd().observe(this, recipes -> {
+        mViewModel.getSpecialRecipesMLD().observe(this, listResource -> {
+            //onChange()
+            if (listResource != null) {
+                Log.d(LOG_TAG, "onChanged: status: " + listResource.status);
+                if (listResource.data != null)
+                    Testing.printRecipes(listResource.data, LOG_TAG);
+                mPrgLoading.stop();
+            }
             mDidScroll = false;
-            mSpecialOffersRvAdapter.setItemList(recipes);
-            mPrgLoading.stop();
         });
-        mViewModel.isQueryExhaustedLd().observe(this, isExhuasted -> {
-            Log.d(LOG_TAG, "subscribeObserver: isExhuasted = " + isExhuasted);
-            mSpecialOffersRvAdapter.setQueryExhausted(isExhuasted);
+
+
+        mViewModel.isQueryExhaustedLd().observe(this, isExhausted -> {
+            Log.d(LOG_TAG, "subscribeObserver: isExhausted = " + isExhausted);
+            mSpecialOffersRvAdapter.setQueryExhausted(isExhausted);
         });
     }
 
@@ -175,7 +183,7 @@ public class SpecialOffersFragment extends BaseDaggerFragment {
 
     private void resetRecipeList() {
         new Handler().postDelayed(() -> {
-            mViewModel.getSpecialRecipesLd().postValue(null);
+            mViewModel.getSpecialRecipesMLD().postValue(null);
             mSpecialOffersRvAdapter = null;
         }, 1000);
     }

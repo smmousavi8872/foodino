@@ -1,5 +1,6 @@
 package com.developer.smmousavi.foodino.fragments.map;
 
+import android.app.Application;
 import android.util.Log;
 
 import com.developer.smmousavi.foodino.base.BaseViewModel;
@@ -15,7 +16,8 @@ import static com.developer.smmousavi.foodino.fragments.map.MapFragment.TAG;
 public class MapFragmentViewModel extends BaseViewModel {
 
     @Inject
-    public MapFragmentViewModel(MapRouteRestApi mapRouteRestApi) {
+    public MapFragmentViewModel(Application app, MapRouteRestApi mapRouteRestApi) {
+        super(app);
         mRouteRepo = MapRouteRepository.getInstance();
         if (mapRouteRestApi == null)
             Log.i(TAG, "MapFragmentViewModel: mapRouteRestApi is null");

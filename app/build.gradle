@@ -58,8 +58,8 @@ dependencies {
     implementation "androidx.annotation:annotation:1.1.0"
 
     //material design
-    implementation 'com.google.android.material:material:1.2.0-alpha06'
-    //implementation 'com.google.android.material:material:1.0.0'
+    //implementation 'com.google.android.material:material:1.2.0-alpha06'
+    implementation 'com.google.android.material:material:1.0.0'
 
     //auto value
     implementation "com.google.auto.value:auto-value-annotations:1.6.3"
@@ -73,7 +73,7 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$dagger_version"
     annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_version"
 
-    //rxjava
+    //rxJava
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
     // RxAndroid providing Android Scheduler // Should update at some point
@@ -81,13 +81,13 @@ dependencies {
 
     //retrofit
     def retrofitVersion = "2.5.0"
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     implementation 'com.squareup.moshi:moshi:1.8.0'
     implementation 'com.squareup.okhttp3:okhttp:3.12.0'
     implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
-    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
 
     //loading

@@ -11,7 +11,7 @@ public class SpecialOffersActivity extends SingleFragmentActivity {
 
 
     public static final String NEW_INTENT_OFFER_TYPE =
-        "com.developer.smmousavi.digishop.activity.specialoffers.SpecialOffersActivity.NewIntentOfferType";
+        "com.developer.smmousavi.foodino.activity.specialoffers.SpecialOffersActivity.NewIntentOfferType";
 
     public enum OfferType {
         SPECIAL_OFFER,

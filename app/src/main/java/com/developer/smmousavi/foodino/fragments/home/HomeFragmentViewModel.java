@@ -1,5 +1,7 @@
 package com.developer.smmousavi.foodino.fragments.home;
 
+import android.app.Application;
+
 import com.developer.smmousavi.foodino.base.BaseViewModel;
 import com.developer.smmousavi.foodino.models.Banner;
 import com.developer.smmousavi.foodino.models.Category;
@@ -19,7 +21,8 @@ public class HomeFragmentViewModel extends BaseViewModel {
     private HomeRepository mSpecialRecipeRepo;
 
     @Inject
-    public HomeFragmentViewModel() {
+    public HomeFragmentViewModel(Application app) {
+        super(app);
         mSpecialRecipeRepo = HomeRepository.getInstance();
     }
 
@@ -31,8 +34,6 @@ public class HomeFragmentViewModel extends BaseViewModel {
     public void searchPreviewRecipes(String query, int pageNum) {
         mSpecialRecipeRepo.getPreviewRecipes(query, pageNum);
     }
-
-
 
 
     public LiveData<List<Banner>> getBannerListLiveData() {

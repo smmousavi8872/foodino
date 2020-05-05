@@ -1,5 +1,7 @@
 package com.developer.smmousavi.foodino.fragments.productdetail;
 
+import android.app.Application;
+
 import com.developer.smmousavi.foodino.base.BaseViewModel;
 import com.developer.smmousavi.foodino.models.Recipe;
 import com.developer.smmousavi.foodino.repositories.GetRecipeRepository;
@@ -15,7 +17,8 @@ public class ProductDetailFragmentViewModel extends BaseViewModel {
     private boolean mRetrieveRecipe;
 
     @Inject
-    public ProductDetailFragmentViewModel() {
+    public ProductDetailFragmentViewModel(Application app) {
+        super(app);
         mGetRecipeRepository = GetRecipeRepository.getInstance();
         mRetrieveRecipe = false;
     }

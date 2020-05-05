@@ -5,7 +5,6 @@ import android.util.Log;
 import com.developer.smmousavi.foodino.constants.Constants;
 import com.developer.smmousavi.foodino.models.Recipe;
 import com.developer.smmousavi.foodino.network.AppExecutors;
-import com.developer.smmousavi.foodino.network.factory.RecipeRestApiFactory;
 import com.developer.smmousavi.foodino.network.reciperesponses.RecipeSearchResponse;
 
 import java.io.IOException;
@@ -77,10 +76,10 @@ public class HomeApiClient {
                 if (response.code() == 200) {
                     List<Recipe> list = new ArrayList<>(((RecipeSearchResponse) response.body()).getRecipes());
                     if (mPageNumber == 1) {
-                        // page numbger is 1 we just post a list of recipes to the live data
+                        // page number is 1 we just post a list of recipes to the live data
                         mPreviewRecipesLD.postValue(list);
                     } else {
-                        // page numbger is not 1, we add the recieved recipes to the last list and then post it to the live data.
+                        // page number is not 1, we add the received recipes to the last list and then post it to the live data.
                         List<Recipe> currentRecipes = mPreviewRecipesLD.getValue();
                         currentRecipes.addAll(list);
                         mPreviewRecipesLD.postValue(currentRecipes);
@@ -99,10 +98,11 @@ public class HomeApiClient {
         }
 
         private Call<RecipeSearchResponse> getPreviewRecipes(String query, int pageNumber) {
-            return RecipeRestApiFactory.create().getSpecialRecipes(
+           /* return RecipeRestApiFactory.create().getSpecialRecipes(
                 Constants.RECIPE_API_KEY,
                 query,
-                String.valueOf(pageNumber));
+                String.valueOf(pageNumber));*/
+           return null;
         }
 
 
