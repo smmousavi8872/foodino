@@ -4,9 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.developer.smmousavi.foodino.activities.singlefragment.SingleFragmentActivity;
+import com.developer.smmousavi.foodino.fragments.base.BaseDaggerFragment;
 import com.developer.smmousavi.foodino.fragments.categorylist.CategoryListFragment;
-
-import androidx.fragment.app.Fragment;
 
 public class CategoryListActivity extends SingleFragmentActivity {
 
@@ -19,7 +18,7 @@ public class CategoryListActivity extends SingleFragmentActivity {
     }
 
     @Override
-    public Fragment createFragment() {
+    public BaseDaggerFragment createFragment() {
         int selectedPage = getIntent().getIntExtra(EXTRA_SELECTED_PAGE_TAB, 0);
         return CategoryListFragment.newInstance(selectedPage);
     }

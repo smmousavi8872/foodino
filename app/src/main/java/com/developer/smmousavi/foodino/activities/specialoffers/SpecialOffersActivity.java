@@ -4,9 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.developer.smmousavi.foodino.activities.singlefragment.SingleFragmentActivity;
+import com.developer.smmousavi.foodino.fragments.base.BaseDaggerFragment;
 import com.developer.smmousavi.foodino.fragments.specialoffers.SpecialOffersFragment;
-
-import androidx.fragment.app.Fragment;
 
 public class SpecialOffersActivity extends SingleFragmentActivity {
 
@@ -28,7 +27,7 @@ public class SpecialOffersActivity extends SingleFragmentActivity {
     }
 
     @Override
-    public Fragment createFragment() {
+    public BaseDaggerFragment createFragment() {
         OfferType type = (OfferType) getIntent().getSerializableExtra(NEW_INTENT_OFFER_TYPE);
         return SpecialOffersFragment.newInstance(type);
     }

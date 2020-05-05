@@ -175,7 +175,7 @@ public class MapSearchFragment extends BaseDaggerFragment implements AddressSele
     @OnClick(R.id.imgSearchBack)
     public void onSearchBackClick() {
         replaceFragment(R.id.flSingleFragmentContainer, MapFragment.newInstance(null),
-            MapFragment.TAG, Animations.SLIDE_DOWN, Animations.SLIDE_IN_BOTTOM_FAST);
+            MapFragment.TAG, Animations.SLIDE_DOWN, Animations.SLIDE_IN_BOTTOM_FAST, true);
         finishFragment();
     }
 
@@ -183,7 +183,8 @@ public class MapSearchFragment extends BaseDaggerFragment implements AddressSele
     @Override
     public void onAddressSelected(double[] latLng) {
         replaceFragment(R.id.flSingleFragmentContainer, MapFragment.newInstance(latLng),
-            MapFragment.TAG, Animations.SLIDE_DOWN, Animations.SLIDE_IN_BOTTOM_FAST);
+            MapFragment.TAG, Animations.SLIDE_DOWN, Animations.SLIDE_IN_BOTTOM_FAST, true);
         finishFragment();
     }
+
 }

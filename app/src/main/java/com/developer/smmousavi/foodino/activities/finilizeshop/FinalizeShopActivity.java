@@ -5,9 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.developer.smmousavi.foodino.activities.singlefragment.SingleFragmentActivity;
+import com.developer.smmousavi.foodino.fragments.base.BaseDaggerFragment;
 import com.developer.smmousavi.foodino.fragments.finalizeshop.FinalizeShopFragment;
-
-import androidx.fragment.app.Fragment;
 
 public class FinalizeShopActivity extends SingleFragmentActivity {
 
@@ -23,7 +22,7 @@ public class FinalizeShopActivity extends SingleFragmentActivity {
     }
 
     @Override
-    public Fragment createFragment() {
+    public BaseDaggerFragment createFragment() {
         return FinalizeShopFragment.newInstance();
     }
 

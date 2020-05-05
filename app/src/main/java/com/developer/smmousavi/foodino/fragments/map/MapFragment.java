@@ -377,7 +377,7 @@ public class MapFragment extends BaseDaggerFragment {
     @OnClick(R.id.cvSearchMap)
     void setOnSearchMapClick() {
         replaceFragment(R.id.flSingleFragmentContainer, MapSearchFragment.newInstance(),
-            MapSearchFragment.TAG, Animations.SLIDE_IN_TOP_FAST, Animations.SLIDE_UP);
+            MapSearchFragment.TAG, Animations.SLIDE_IN_TOP_FAST, Animations.SLIDE_UP, true);
     }
 
     /*

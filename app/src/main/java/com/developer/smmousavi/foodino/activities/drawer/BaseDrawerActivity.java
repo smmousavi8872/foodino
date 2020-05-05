@@ -12,7 +12,7 @@ import com.developer.smmousavi.foodino.R;
 import com.developer.smmousavi.foodino.activities.aboutus.AboutUsActivity;
 import com.developer.smmousavi.foodino.activities.base.BaseDaggerCompatActivity;
 import com.developer.smmousavi.foodino.activities.categorylist.CategoryListActivity;
-import com.developer.smmousavi.foodino.activities.frequentquestions.MapActivity;
+import com.developer.smmousavi.foodino.activities.map.MapActivity;
 import com.developer.smmousavi.foodino.activities.home.HomeDrawerActivity;
 import com.developer.smmousavi.foodino.activities.settings.SettingsActivity;
 import com.developer.smmousavi.foodino.activities.shoppingbasket.ShoppingBasketActivity;
@@ -165,7 +165,7 @@ public abstract class BaseDrawerActivity extends BaseDaggerCompatActivity
             case R.id.navbarMenuSettings:
                 intent = SettingsActivity.newIntent(this);
                 break;
-            case R.id.navbarMenuFrequentQuestions:
+            case R.id.navbarMap:
                 intent = MapActivity.newIntent(this);
                 break;
             case R.id.navbarMenuAboutUs:

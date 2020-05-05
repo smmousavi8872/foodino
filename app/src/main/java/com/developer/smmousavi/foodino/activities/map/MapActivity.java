@@ -1,26 +1,30 @@
-package com.developer.smmousavi.foodino.activities.aboutus;
+package com.developer.smmousavi.foodino.activities.map;
 
 import android.content.Context;
 import android.content.Intent;
 
 import com.developer.smmousavi.foodino.activities.singlefragment.SingleFragmentActivity;
-import com.developer.smmousavi.foodino.fragments.aboutus.AboutUsFragment;
 import com.developer.smmousavi.foodino.fragments.base.BaseDaggerFragment;
+import com.developer.smmousavi.foodino.fragments.map.MapFragment;
 
-public class AboutUsActivity extends SingleFragmentActivity {
+public class MapActivity extends SingleFragmentActivity {
+
+    private BaseDaggerFragment mGuestFragment;
 
     public static Intent newIntent(Context origin) {
-        Intent intent = new Intent(origin, AboutUsActivity.class);
+        Intent intent = new Intent(origin, MapActivity.class);
         return intent;
     }
 
     @Override
     public BaseDaggerFragment createFragment() {
-        return AboutUsFragment.newInstance();
+        mGuestFragment = MapFragment.newInstance(null);
+        return mGuestFragment;
     }
 
     @Override
     public String getTag() {
-        return AboutUsFragment.TAG;
+        return MapFragment.TAG;
     }
+
 }

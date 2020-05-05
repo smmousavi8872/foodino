@@ -65,7 +65,7 @@
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.frequentquestions.MapActivity"
+      android:name="com.developer.smmousavi.foodino.activities.map.MapActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
     <activity

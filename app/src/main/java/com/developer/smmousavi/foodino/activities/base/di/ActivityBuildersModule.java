@@ -13,8 +13,8 @@ import com.developer.smmousavi.foodino.activities.prodcutdetail.ProductDetailDra
 import com.developer.smmousavi.foodino.activities.prodcutdetail.di.ProductDetailDrawerActivityModule;
 import com.developer.smmousavi.foodino.activities.finilizeshop.FinalizeShopActivity;
 import com.developer.smmousavi.foodino.activities.finilizeshop.di.FinalizeShopActivityModule;
-import com.developer.smmousavi.foodino.activities.frequentquestions.MapActivity;
-import com.developer.smmousavi.foodino.activities.frequentquestions.di.FrequentQuestionsActivityModule;
+import com.developer.smmousavi.foodino.activities.map.MapActivity;
+import com.developer.smmousavi.foodino.activities.map.di.MapActivityModule;
 import com.developer.smmousavi.foodino.activities.settings.SettingsActivity;
 import com.developer.smmousavi.foodino.activities.settings.di.SettingsActivityModule;
 import com.developer.smmousavi.foodino.activities.shoppingbasket.ShoppingBasketActivity;
@@ -41,7 +41,7 @@ public abstract class ActivityBuildersModule {
     @ContributesAndroidInjector(modules = {CategoryListActivityModule.class})
     abstract CategoryListActivity contriuteCategoryListActivity();
 
-    @ContributesAndroidInjector(modules = {FrequentQuestionsActivityModule.class})
+    @ContributesAndroidInjector(modules = {MapActivityModule.class})
     abstract MapActivity contributeFrequentQuestionsActivity();
 
     @ContributesAndroidInjector(modules = {BaseDrawerActivityModule.class})
