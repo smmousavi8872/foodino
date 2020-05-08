@@ -223,7 +223,7 @@ public class HomeDrawerFragment extends BaseDaggerFragment implements OnBackPres
             mCategoryPreviewRvAdapter.notifyDataSetChanged();
         }
 
-        LinearLayoutManager layoutManager = mRvHelper.getLinearLayoutManager(getContext(), RecyclerViewHelper.Orientation.HORIZONTAL, false);
+        LinearLayoutManager layoutManager = mRvHelper.getLinearLayoutManager(getContext(), RecyclerViewHelper.Orientation.HORIZONTAL, true);
         mRvHelper.buildRecyclerView(layoutManager, mCategoryPreviewRv, mCategoryPreviewRvAdapter);
         /*
             These lines of code below are to solve the problem of recyclerview items when the parent layout is

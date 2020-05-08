@@ -152,65 +152,65 @@ public class HomeRepository {
         imageUrlList.add("https://i.ibb.co/qn8PY7w/product-detail-slider1.jpg");*/
 
         relatedProductList.add(Product.create("0", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, null, 0, null));
         relatedProductList.add(Product.create("1", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, null, 0, null));
         relatedProductList.add(Product.create("2", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, null, 0, null));
         relatedProductList.add(Product.create("3", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, null, 0, null));
         relatedProductList.add(Product.create("4", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, null, 0, null));
         relatedProductList.add(Product.create("5", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, null, 0, null));
         relatedProductList.add(Product.create("6", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, null, 0, null));
 
         productPreviewList.add(Product.create("0", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, relatedProductList, 0, null));
 
         productPreviewList.add(Product.create("1", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, relatedProductList, 0, null));
 
         productPreviewList.add(Product.create("2", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, relatedProductList, 0, null));
 
         productPreviewList.add(Product.create("3", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, relatedProductList, 0, null));
 
         productPreviewList.add(Product.create("4", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, relatedProductList, 0, null));
 
         productPreviewList.add(Product.create("5", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, relatedProductList, 0, null));
 
         productPreviewList.add(Product.create("6", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, relatedProductList, 0, null));
 
         productPreviewList.add(Product.create("7", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, relatedProductList, 0, null));
 
         productPreviewList.add(Product.create("8", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, relatedProductList, 0, null));
 
         productPreviewList.add(Product.create("9", "فیله ساده مهیا پروتئین مقدار 0.9 کیلوگرم", "تازه و مقوی، سرشار از ویتامین", avatarUrl,
-            "", "دیجی کالا", "دیجی کالا", 6, specifications, parentCategoryList, imageUrlList, 101000,
+            "", "فودینو", "فودینو", 6, specifications, parentCategoryList, imageUrlList, 101000,
             15.0, 0, true, true, relatedProductList, 0, null));
         productMld.setValue(productPreviewList);
         return productMld;
@@ -219,34 +219,34 @@ public class HomeRepository {
 
     public List<Category> getCategoryList() {
         List<Category> categoryList = new ArrayList<>();
-        List<Category> abstractSubcategroyList = new ArrayList<>();
+        List<Category> abstractSubcategoryList = new ArrayList<>();
         MutableLiveData<List<Category>> categoryMld = new MutableLiveData<>();
 
-        abstractSubcategroyList.add(Category.create("0", "کالای دیجیتال", null, true, abstractSubcategroyList, null));
-        abstractSubcategroyList.add(Category.create("1", "آرایشی، بهداشتی و سلامت", null, true, abstractSubcategroyList, null));
-        abstractSubcategroyList.add(Category.create("2", "خودرو، ابزار و اداری", null, true, abstractSubcategroyList, null));
-        abstractSubcategroyList.add(Category.create("3", "خانه و آشپزخانه", null, true, abstractSubcategroyList, null));
-        abstractSubcategroyList.add(Category.create("4", "کتاب، لوازم تحریر و هنر", null, true, abstractSubcategroyList, null));
-        abstractSubcategroyList.add(Category.create("5", "اسباب بازی، کودک و نوزاد", null, true, abstractSubcategroyList, null));
-        abstractSubcategroyList.add(Category.create("6", "ورزش و سفر", null, true, abstractSubcategroyList, null));
-        abstractSubcategroyList.add(Category.create("7", "خوردنی و آشامیدنی", null, true, abstractSubcategroyList, null));
+        abstractSubcategoryList.add(Category.create("0", "غذاهای ایرانی", null, true, abstractSubcategoryList, null));
+        abstractSubcategoryList.add(Category.create("1", "غذاهای سنتی", null, true, abstractSubcategoryList, null));
+        abstractSubcategoryList.add(Category.create("2", "فست فود", null, true, abstractSubcategoryList, null));
+        abstractSubcategoryList.add(Category.create("3", "نوشیدنی", null, true, abstractSubcategoryList, null));
+        abstractSubcategoryList.add(Category.create("4", "دسر و سالاد", null, true, abstractSubcategoryList, null));
+        abstractSubcategoryList.add(Category.create("5", "اسنک", null, true, abstractSubcategoryList, null));
+        abstractSubcategoryList.add(Category.create("6", "کافه", null, true, abstractSubcategoryList, null));
+        abstractSubcategoryList.add(Category.create("7", "بستنی", null, true, abstractSubcategoryList, null));
 
-        categoryList.add(Category.create("0", "کالای دیجیتال", null, true, abstractSubcategroyList, null));
-        categoryList.add(Category.create("1", "آرایشی، بهداشتی و سلامت", null, true, abstractSubcategroyList, null));
-        categoryList.add(Category.create("2", "خودرو، ابزار و اداری", null, true, abstractSubcategroyList, null));
-        categoryList.add(Category.create("3", "خانه و آشپزخانه", null, true, abstractSubcategroyList, null));
-        categoryList.add(Category.create("4", "کتاب، لوازم تحریر و هنر", null, true, abstractSubcategroyList, null));
-        categoryList.add(Category.create("5", "اسباب بازی، کودک و نوزاد", null, true, abstractSubcategroyList, null));
-        categoryList.add(Category.create("6", "ورزش و سفر", null, true, abstractSubcategroyList, null));
-        categoryList.add(Category.create("7", "خوردنی و آشامیدنی", null, true, abstractSubcategroyList, null));
+        categoryList.add(Category.create("0", "غذاهای ایرانی", null, true, abstractSubcategoryList, null));
+        categoryList.add(Category.create("1", "غذاهای سنتی", null, true, abstractSubcategoryList, null));
+        categoryList.add(Category.create("2", "فست فود", null, true, abstractSubcategoryList, null));
+        categoryList.add(Category.create("3", "نوشیدنی", null, true, abstractSubcategoryList, null));
+        categoryList.add(Category.create("4", "دسر و سالاد", null, true, abstractSubcategoryList, null));
+        categoryList.add(Category.create("5", "اسنک", null, true, abstractSubcategoryList, null));
+        categoryList.add(Category.create("6", "کافه", null, true, abstractSubcategoryList, null));
+        categoryList.add(Category.create("7", "بستنی", null, true, abstractSubcategoryList, null));
         categoryMld.postValue(categoryList);
 
         return categoryList;
     }
 
     /**
-     * @HardCoded should recieve from server
-     * MutableLiveData should change to Obeservable<>
+     * @HardCoded should receive from server
+     * MutableLiveData should change to Observable<>
      */
     public Product getProductById(String productId) {
         List<Product> products = getProductPreviewList().getValue();
