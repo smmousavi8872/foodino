@@ -6,7 +6,7 @@
   android:layout_height="match_parent"
   android:focusable="true"
   android:focusableInTouchMode="true"
-  tools:context=".fragments.signinsignup.SignInFragment">
+  tools:context=".ui.fragments.signinsignup.SignInFragment">
 
   <View
     android:id="@+id/viewSignUpInDigishopUnderline"

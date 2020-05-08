@@ -21,7 +21,7 @@ public interface RecipeRestApi {
 
     //GET PREVIEW RECIPES RESPONSE
     @GET("api/search")
-    Call<RecipeResponse> getPreviewRecipes(
+    LiveData<ApiResponse<RecipeSearchResponse>> getIncredibleRecipes(
         @Query("key") String key,
         @Query("q") String query,
         @Query("page") String page);
@@ -29,7 +29,7 @@ public interface RecipeRestApi {
 
     //GET SUGGESTIONS RECIPES RESPONSE
     @GET("api/search")
-    Call<RecipeResponse> getSuggestionRecipes(
+    LiveData<ApiResponse<RecipeSearchResponse>> getSuggestionRecipes(
         @Query("key") String key,
         @Query("q") String query,
         @Query("page") String page);

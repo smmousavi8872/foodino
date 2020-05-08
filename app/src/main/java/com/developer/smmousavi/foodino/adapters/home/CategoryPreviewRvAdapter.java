@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import com.developer.smmousavi.foodino.R;
 import com.developer.smmousavi.foodino.models.Category;
-import com.developer.smmousavi.foodino.viewholders.categorypreview.CategoryPreviewVH;
+import com.developer.smmousavi.foodino.ui.viewholders.categorypreview.CategoryPreviewVH;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class CategoryPreviewRvAdapter extends RecyclerView.Adapter<CategoryPrevi
 
     @Override
     public void onBindViewHolder(@NonNull CategoryPreviewVH holder, int position) {
-        holder.bind(mCategoryList.get(position));
+        holder.onBind(mCategoryList.get(position));
 
     }
 

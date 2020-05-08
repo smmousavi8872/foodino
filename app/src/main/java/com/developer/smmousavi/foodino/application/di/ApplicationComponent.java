@@ -2,10 +2,10 @@ package com.developer.smmousavi.foodino.application.di;
 
 import android.app.Application;
 
-import com.developer.smmousavi.foodino.activities.base.di.ActivityBuildersModule;
+import com.developer.smmousavi.foodino.ui.activities.base.di.ActivityBuildersModule;
 import com.developer.smmousavi.foodino.application.BaseApplication;
 import com.developer.smmousavi.foodino.factory.viewmodel.di.ViewModelFactoryModule;
-import com.developer.smmousavi.foodino.fragments.base.di.FragmentBuildersModule;
+import com.developer.smmousavi.foodino.ui.fragments.base.di.FragmentBuildersModule;
 
 import javax.inject.Singleton;
 

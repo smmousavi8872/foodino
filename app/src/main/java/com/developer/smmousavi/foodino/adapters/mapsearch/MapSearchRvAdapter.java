@@ -6,9 +6,9 @@ import android.view.ViewGroup;
 
 import com.developer.smmousavi.foodino.R;
 import com.developer.smmousavi.foodino.base.recyclerview.BaseRvAdapter;
-import com.developer.smmousavi.foodino.fragments.mapsearch.AddressSelectCallback;
+import com.developer.smmousavi.foodino.ui.fragments.mapsearch.AddressSelectCallback;
 import com.developer.smmousavi.foodino.network.mapresponse.Value;
-import com.developer.smmousavi.foodino.viewholders.mapsearch.MapSearchVH;
+import com.developer.smmousavi.foodino.ui.viewholders.mapsearch.MapSearchVH;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -40,12 +40,12 @@ public class MapSearchRvAdapter<T extends Value> extends BaseRvAdapter<T> {
 
     @Override
     protected void bindHeaderViewHolder(RecyclerView.ViewHolder viewHolder) {
-        ((MapSearchVH) viewHolder).bind(mItemList.get(0), mAddressSelectCallback);
+        ((MapSearchVH) viewHolder).onBind(mItemList.get(0), mAddressSelectCallback);
     }
 
     @Override
     protected void bindItemViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
-        ((MapSearchVH) viewHolder).bind(mItemList.get(position), mAddressSelectCallback);
+        ((MapSearchVH) viewHolder).onBind(mItemList.get(position), mAddressSelectCallback);
     }
 
     @Override

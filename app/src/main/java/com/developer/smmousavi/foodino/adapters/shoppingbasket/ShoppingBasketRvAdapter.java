@@ -7,10 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.developer.smmousavi.foodino.R;
-import com.developer.smmousavi.foodino.fragments.shoppingbasket.callback.EmptyBasketCallback;
-import com.developer.smmousavi.foodino.fragments.shoppingbasket.callback.UpdateBasketContentCallback;
+import com.developer.smmousavi.foodino.ui.fragments.shoppingbasket.callback.EmptyBasketCallback;
+import com.developer.smmousavi.foodino.ui.fragments.shoppingbasket.callback.UpdateBasketContentCallback;
 import com.developer.smmousavi.foodino.models.Product;
-import com.developer.smmousavi.foodino.viewholders.shoppingbasket.ShoppingBasketVH;
+import com.developer.smmousavi.foodino.ui.viewholders.shoppingbasket.ShoppingBasketVH;
 
 import java.util.List;
 

@@ -1,56 +1,101 @@
 package com.developer.smmousavi.foodino.repositories;
 
+import android.content.Context;
+import android.util.Log;
+
+import com.developer.smmousavi.foodino.constants.Constants;
 import com.developer.smmousavi.foodino.models.Banner;
 import com.developer.smmousavi.foodino.models.Category;
 import com.developer.smmousavi.foodino.models.Product;
 import com.developer.smmousavi.foodino.models.Recipe;
 import com.developer.smmousavi.foodino.models.Specifications;
-import com.developer.smmousavi.foodino.network.clients.HomeApiClient;
+import com.developer.smmousavi.foodino.network.AppExecutors;
+import com.developer.smmousavi.foodino.network.factory.RecipeRestApiFactory;
+import com.developer.smmousavi.foodino.network.reciperesponses.ApiResponse;
+import com.developer.smmousavi.foodino.network.reciperesponses.RecipeSearchResponse;
+import com.developer.smmousavi.foodino.network.util.NetworkBoundResource;
+import com.developer.smmousavi.foodino.network.util.Resource;
+import com.developer.smmousavi.foodino.presistence.recipe.RecipeDAO;
+import com.developer.smmousavi.foodino.presistence.recipe.RecipeDatabase;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
 
 public class HomeRepository {
 
     private static HomeRepository sInstance;
+    private RecipeDAO mRecipeDAO;
+    private MediatorLiveData<Resource<List<Recipe>>> mRecipeMLD;
+    public static final String TAG = "TAG";
 
-    private HomeApiClient mHomeApiClient;
-    private String mPreviewRecipesQuery;
-    private int mPreviewRecipesPageNum;
+    public MediatorLiveData<Resource<List<Recipe>>> getRecipeMLD() {
+        return mRecipeMLD;
+    }
 
-
-    public static HomeRepository getInstance() {
+    public static HomeRepository getInstance(Context context) {
         if (sInstance == null) {
-            sInstance = new HomeRepository();
+            sInstance = new HomeRepository(context);
             return sInstance;
         }
         return sInstance;
     }
 
-    private HomeRepository() {
-        mHomeApiClient = HomeApiClient.getInstance();
+    private HomeRepository(Context context) {
+        mRecipeDAO = RecipeDatabase.getInstance(context).getRecipeDao();
     }
 
-    public MutableLiveData<List<Recipe>> getPreviewRecipesLd() {
-        return mHomeApiClient.getPreviewRecipesLd();
-    }
+    public LiveData<Resource<List<Recipe>>> getIncredibleRecipes(final String query, final int pageNumber) {
+        return new NetworkBoundResource<List<Recipe>, RecipeSearchResponse>(AppExecutors.getInstance()) {
 
-    public void getPreviewRecipes(String query, int pageNum) {
-        mPreviewRecipesQuery = query;
-        mPreviewRecipesPageNum = pageNum;
-        if (mPreviewRecipesPageNum == 0)
-            mPreviewRecipesPageNum = 1;
-        mHomeApiClient.getPreviewRecipesApi(mPreviewRecipesQuery, mPreviewRecipesPageNum);
-    }
+            @Override
+            protected void saveCallResult(@NonNull RecipeSearchResponse item) {
+                if (item.getRecipes() != null) {
+                    //  recipe list will be null if the api key is expired
+                    Recipe[] recipes = new Recipe[item.getRecipes().size()];
+                    int index = 0;
+                    for (long rowId : mRecipeDAO.insertRecipes(item.getRecipes().toArray(recipes))) {
+                        if (rowId == -1) {
+                            Log.d(TAG, "saveCallResult: CONFLICT... This recipe is already in the cache");
+                            // if the recipe already exists... I don't want to set the ingredients or timestamp b/c
+                            // they will be erased
+                            mRecipeDAO.updateRecipe(
+                                recipes[index].getRecipeId(),
+                                recipes[index].getTitle(),
+                                recipes[index].getPublisher(),
+                                recipes[index].getImageUrl(),
+                                recipes[index].getSocialRank()
+                            );
+                        }
+                        index++;
+                    }
+                }
+            }
 
-    public void getPreviewRecipesNextPage() {
-        mHomeApiClient.getPreviewRecipesApi(mPreviewRecipesQuery, mPreviewRecipesPageNum++);
-    }
+            @Override
+            protected boolean shouldFetch(@Nullable List<Recipe> data) {
+                return true;
+            }
 
+            @NonNull
+            @Override
+            protected LiveData<List<Recipe>> loadFromDb() {
+                return mRecipeDAO.searchRecipes(query, pageNumber);
+            }
+
+            @NonNull
+            @Override
+            protected LiveData<ApiResponse<RecipeSearchResponse>> createCall() {
+                return RecipeRestApiFactory.create().getIncredibleRecipes(Constants.RECIPE_API_KEY, query, String.valueOf(pageNumber));
+            }
+        }.getAsLiveData();
+    }
 
     /**
      * @HardCoded should receive from server

@@ -7,7 +7,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:orientation="vertical"
-  tools:context=".fragments.home.HomeDrawerFragment">
+  tools:context=".ui.fragments.home.HomeDrawerFragment">
 
   <!--TODO: elevation should change-->
   <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -65,7 +65,7 @@
         android:layout_below="@id/frHomeSliderLayout"
         android:layout_marginTop="12dp" />
 
-      <com.developer.smmousavi.foodino.customviews.CustomMapView
+      <com.developer.smmousavi.foodino.ui.customviews.CustomMapView
         android:id="@+id/map_view"
         android:layout_width="match_parent"
         android:layout_height="256dp"

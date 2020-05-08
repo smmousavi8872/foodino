@@ -16,7 +16,7 @@
     android:theme="@style/AppTheme">
 
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.home.HomeDrawerActivity"
+      android:name=".ui.activities.home.HomeDrawerActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity">
       <intent-filter>
@@ -28,48 +28,48 @@
     </activity>
 
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.prodcutdetail.ProductDetailDrawerActivity"
+      android:name=".ui.activities.prodcutdetail.ProductDetailDrawerActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.drawer.BaseDrawerActivity"
+      android:name=".ui.activities.drawer.BaseDrawerActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.signinsignup.SignInSignUpActivity"
+      android:name=".ui.activities.signinsignup.SignInSignUpActivity"
       android:screenOrientation="portrait"
       android:windowSoftInputMode="stateVisible|adjustResize"
       tools:ignore="LockedOrientationActivity" />
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.finilizeshop.FinalizeShopActivity"
+      android:name=".ui.activities.finilizeshop.FinalizeShopActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.base.BaseDaggerCompatActivity"
+      android:name=".ui.activities.base.BaseDaggerCompatActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.categorylist.CategoryListActivity"
+      android:name=".ui.activities.categorylist.CategoryListActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.specialoffers.SpecialOffersActivity"
+      android:name=".ui.activities.specialoffers.SpecialOffersActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.shoppingbasket.ShoppingBasketActivity"
+      android:name=".ui.activities.shoppingbasket.ShoppingBasketActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.settings.SettingsActivity"
+      android:name=".ui.activities.settings.SettingsActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.map.MapActivity"
+      android:name=".ui.activities.map.MapActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
     <activity
-      android:name="com.developer.smmousavi.foodino.activities.aboutus.AboutUsActivity"
+      android:name=".ui.activities.aboutus.AboutUsActivity"
       android:screenOrientation="portrait"
       tools:ignore="LockedOrientationActivity" />
   </application>

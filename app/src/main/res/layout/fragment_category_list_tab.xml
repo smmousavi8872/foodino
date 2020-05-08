@@ -3,7 +3,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".fragments.categorylist.CategoryListTabLayoutFragment">
+             tools:context=".ui.fragments.categorylist.CategoryListTabLayoutFragment">
 
   <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/rvCategoryListTabContainer"

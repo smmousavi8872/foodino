@@ -6,7 +6,7 @@
   android:layout_height="match_parent"
   android:background="@color/milkyWhite"
   android:orientation="vertical"
-  tools:context=".fragments.specialoffers.SpecialOffersFragment">
+  tools:context=".ui.fragments.specialoffers.SpecialOffersFragment">
 
   <include
     android:id="@+id/speicalOfferToolbar"

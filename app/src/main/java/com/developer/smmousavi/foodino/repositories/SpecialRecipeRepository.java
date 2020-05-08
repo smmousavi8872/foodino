@@ -6,7 +6,6 @@ import android.util.Log;
 import com.developer.smmousavi.foodino.constants.Constants;
 import com.developer.smmousavi.foodino.models.Recipe;
 import com.developer.smmousavi.foodino.network.AppExecutors;
-import com.developer.smmousavi.foodino.network.clients.SpecialRecipesApiClient;
 import com.developer.smmousavi.foodino.network.factory.RecipeRestApiFactory;
 import com.developer.smmousavi.foodino.network.reciperesponses.ApiResponse;
 import com.developer.smmousavi.foodino.network.reciperesponses.RecipeSearchResponse;
@@ -20,27 +19,12 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MediatorLiveData;
-import androidx.lifecycle.MutableLiveData;
 
 public class SpecialRecipeRepository {
     private static final String TAG = "RecipeRepositoryTag";
 
     private static SpecialRecipeRepository sInstance;
-
-    private SpecialRecipesApiClient mSpecialRecipesApiClient;
-    private String mSpecialRecipesQuery;
-    private int mSpecialRecipesPageNum;
-    private MutableLiveData<Boolean> mIsQueryExhausted;
-    private MediatorLiveData<List<Recipe>> mRecipesMedLd;
     private RecipeDAO mRecipeDAO;
-
-    private SpecialRecipeRepository(Context context) {
-        mIsQueryExhausted = new MutableLiveData<>();
-        mRecipesMedLd = new MediatorLiveData<>();
-        mRecipeDAO = RecipeDatabase.getInstance(context).getRecipeDao();
-        initMediators();
-    }
 
     public static SpecialRecipeRepository getInstance(Context context) {
         if (sInstance == null) {
@@ -49,44 +33,9 @@ public class SpecialRecipeRepository {
         return sInstance;
     }
 
-    private void initMediators() {
-        LiveData<List<Recipe>> recipeListApiSource = mSpecialRecipesApiClient.getSpecialRecipesLd();
-        mRecipesMedLd.addSource(recipeListApiSource, recipes -> {
-            if (recipes != null) {
-                mRecipesMedLd.setValue(recipes);
-                doneQuery(recipes);
-            } else {
-                // search database cache
-                doneQuery(null);
-            }
-        });
+    private SpecialRecipeRepository(Context context) {
+        mRecipeDAO = RecipeDatabase.getInstance(context).getRecipeDao();
     }
-
-    private void doneQuery(List<Recipe> list) {
-        if (list != null) {
-            if (list.size() % 30 != 0)
-                mIsQueryExhausted.setValue(true);
-        } else
-            mIsQueryExhausted.setValue(true);
-    }
-
-    public MutableLiveData<List<Recipe>> getSpecialRecipesLd() {
-        // returning mediatorLiveData because it is going to change
-        //
-        return mRecipesMedLd;
-    }
-
-    public MutableLiveData<Boolean> isQueryExhausted() {
-        return mIsQueryExhausted;
-    }
-
-
-
-    public void getSpecialRecipesNextPage() {
-        Log.i("NEXT_PAGE", "Get Next page. current page is: " + mSpecialRecipesPageNum);
-        mSpecialRecipesApiClient.getSpecialRecipesApi(mSpecialRecipesQuery, mSpecialRecipesPageNum++);
-    }
-
 
     public LiveData<Resource<List<Recipe>>> getSpecialRecipes(final String query, final int pageNumber) {
         return new NetworkBoundResource<List<Recipe>, RecipeSearchResponse>(AppExecutors.getInstance()) {
@@ -112,11 +61,10 @@ public class SpecialRecipeRepository {
                         index++;
                     }
                 }
-
             }
-
             @Override
             protected boolean shouldFetch(@Nullable List<Recipe> data) {
+                // set the interval of request.
                 return true;
             }
 

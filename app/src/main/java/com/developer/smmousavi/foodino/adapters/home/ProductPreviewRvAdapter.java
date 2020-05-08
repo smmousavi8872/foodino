@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import com.developer.smmousavi.foodino.R;
 import com.developer.smmousavi.foodino.models.Recipe;
-import com.developer.smmousavi.foodino.viewholders.productpreview.ProductPreviewVH;
+import com.developer.smmousavi.foodino.ui.viewholders.productpreview.ProductPreviewVH;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class ProductPreviewRvAdapter extends RecyclerView.Adapter<ProductPreview
 
     @Override
     public void onBindViewHolder(@NonNull ProductPreviewVH holder, int position) {
-        holder.bind(mItemList.get(position));
+        holder.onBind(mItemList.get(position));
     }
 
     @Override

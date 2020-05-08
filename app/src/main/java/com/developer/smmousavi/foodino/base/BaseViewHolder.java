@@ -14,5 +14,5 @@ public abstract class BaseViewHolder<T> extends RecyclerView.ViewHolder implemen
         itemView.setOnClickListener(this);
     }
 
-    public abstract void bind(T item);
+    public abstract void onBind(T item);
 }

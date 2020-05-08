@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import com.developer.smmousavi.foodino.R;
 import com.developer.smmousavi.foodino.models.Banner;
-import com.developer.smmousavi.foodino.viewholders.imageslider.HomeSliderVH;
+import com.developer.smmousavi.foodino.ui.viewholders.imageslider.HomeSliderVH;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
 import java.util.List;

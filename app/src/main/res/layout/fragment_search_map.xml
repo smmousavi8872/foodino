@@ -7,7 +7,7 @@
   android:layout_height="match_parent"
   android:layoutDirection="rtl"
   android:orientation="vertical"
-  tools:context=".fragments.mapsearch.MapSearchFragment">
+  tools:context=".ui.fragments.mapsearch.MapSearchFragment">
 
 
 

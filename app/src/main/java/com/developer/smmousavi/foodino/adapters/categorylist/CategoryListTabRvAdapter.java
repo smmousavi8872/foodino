@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import com.developer.smmousavi.foodino.R;
 import com.developer.smmousavi.foodino.models.Category;
-import com.developer.smmousavi.foodino.viewholders.categorylisttab.CategoryListTabVH;
+import com.developer.smmousavi.foodino.ui.viewholders.categorylisttab.CategoryListTabVH;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class CategoryListTabRvAdapter extends RecyclerView.Adapter<CategoryListT
 
     @Override
     public void onBindViewHolder(@NonNull CategoryListTabVH holder, int position) {
-        holder.bind(mItemList.get(position));
+        holder.onBind(mItemList.get(position));
 
     }
 

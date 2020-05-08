@@ -1,56 +1,102 @@
 package com.developer.smmousavi.foodino.repositories;
 
+import android.content.Context;
+import android.util.Log;
+
+import com.developer.smmousavi.foodino.constants.Constants;
 import com.developer.smmousavi.foodino.models.Category;
 import com.developer.smmousavi.foodino.models.Product;
 import com.developer.smmousavi.foodino.models.Recipe;
 import com.developer.smmousavi.foodino.models.Specifications;
-import com.developer.smmousavi.foodino.network.clients.ShoppingBasketApiClient;
+import com.developer.smmousavi.foodino.network.AppExecutors;
+import com.developer.smmousavi.foodino.network.factory.RecipeRestApiFactory;
+import com.developer.smmousavi.foodino.network.reciperesponses.ApiResponse;
+import com.developer.smmousavi.foodino.network.reciperesponses.RecipeSearchResponse;
+import com.developer.smmousavi.foodino.network.util.NetworkBoundResource;
+import com.developer.smmousavi.foodino.network.util.Resource;
+import com.developer.smmousavi.foodino.presistence.recipe.RecipeDAO;
+import com.developer.smmousavi.foodino.presistence.recipe.RecipeDatabase;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 public class ShoppingBasketRepository {
 
+    private static final String TAG = "TAG";
     private static ShoppingBasketRepository sInstance;
 
+    private RecipeDAO mRecipeDAO;
 
-    private ShoppingBasketApiClient mShoppingBasketApiClient;
-    private String mSuggestedRecipesQuery;
-    private int mSuggestedRecipesPageNum;
 
-    public static ShoppingBasketRepository getInstance() {
+    public static ShoppingBasketRepository getInstance(Context context) {
         if (sInstance == null) {
-            sInstance = new ShoppingBasketRepository();
+            sInstance = new ShoppingBasketRepository(context);
             return sInstance;
         }
         return sInstance;
     }
 
-    private ShoppingBasketRepository() {
-        mShoppingBasketApiClient = ShoppingBasketApiClient.getInstance();
+    private ShoppingBasketRepository(Context context) {
+        mRecipeDAO = RecipeDatabase.getInstance(context).getRecipeDao();
     }
 
-    public MutableLiveData<List<Recipe>> getSuggestedRecipesLd() {
-        return mShoppingBasketApiClient.getSuggestedRecipesLd();
-    }
+    public LiveData<Resource<List<Recipe>>> getSuggestedRecipes(final String query, final int pageNumber) {
+        return new NetworkBoundResource<List<Recipe>, RecipeSearchResponse>(AppExecutors.getInstance()) {
 
-    public void getSuggestedRecipes(String query, int pageNum) {
-        mSuggestedRecipesQuery = query;
-        mSuggestedRecipesPageNum = pageNum;
-        if (mSuggestedRecipesPageNum == 0)
-            mSuggestedRecipesPageNum = 1;
-        mShoppingBasketApiClient.getSuggestedRecipesApi(mSuggestedRecipesQuery, mSuggestedRecipesPageNum);
-    }
+            @Override
+            protected void saveCallResult(@NonNull RecipeSearchResponse item) {
+                if (item.getRecipes() != null) {
+                    //  recipe list will be null if the api key is expired
+                    Recipe[] recipes = new Recipe[item.getRecipes().size()];
+                    int index = 0;
+                    for (long rowId : mRecipeDAO.insertRecipes(item.getRecipes().toArray(recipes))) {
+                        if (rowId == -1) {
+                            Log.d(TAG, "saveCallResult: CONFLICT... This recipe is already in the cache");
+                            // if the recipe already exists... I don't want to set the ingredients or timestamp b/c
+                            // they will be erased
+                            mRecipeDAO.updateRecipe(
+                                recipes[index].getRecipeId(),
+                                recipes[index].getTitle(),
+                                recipes[index].getPublisher(),
+                                recipes[index].getImageUrl(),
+                                recipes[index].getSocialRank()
+                            );
+                        }
+                        index++;
+                    }
+                }
 
-    public void getSuggestedRecipesNextPage() {
-        mShoppingBasketApiClient.getSuggestedRecipesApi(mSuggestedRecipesQuery, mSuggestedRecipesPageNum++);
+            }
+
+            @Override
+            protected boolean shouldFetch(@Nullable List<Recipe> data) {
+                // set the interval of request.
+                return true;
+            }
+
+            @NonNull
+            @Override
+            protected LiveData<List<Recipe>> loadFromDb() {
+                return mRecipeDAO.searchRecipes(query, pageNumber);
+            }
+
+            @NonNull
+            @Override
+            protected LiveData<ApiResponse<RecipeSearchResponse>> createCall() {
+                return RecipeRestApiFactory.create().getSuggestionRecipes(Constants.MAP_API_KEY, query, String.valueOf(pageNumber));
+            }
+        }.getAsLiveData();
+
     }
 
     /**
-     * @HardCoded should recieve from server
+     * @HardCoded should receive from server
      * TODO: MutableLiveData should change to Observable<>
      */
     public MutableLiveData<List<Product>> getShoppingBasketList() {

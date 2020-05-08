@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import com.developer.smmousavi.foodino.R;
 import com.developer.smmousavi.foodino.base.recyclerview.BaseRvAdapter;
 import com.developer.smmousavi.foodino.models.Recipe;
-import com.developer.smmousavi.foodino.viewholders.LoadMoreVH;
-import com.developer.smmousavi.foodino.viewholders.specialoffers.SpecialOffersVH;
+import com.developer.smmousavi.foodino.ui.viewholders.LoadMoreVH;
+import com.developer.smmousavi.foodino.ui.viewholders.specialoffers.SpecialOffersVH;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -48,13 +48,13 @@ public class SpecialOffersRvAdapter<T extends Recipe> extends BaseRvAdapter<T> {
 
     @Override
     protected void bindItemViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
-        ((SpecialOffersVH) viewHolder).bind(mItemList.get(position));
+        ((SpecialOffersVH) viewHolder).onBind(mItemList.get(position));
 
     }
 
     @Override
     protected void bindFooterViewHolder(RecyclerView.ViewHolder viewHolder) {
-        ((LoadMoreVH) viewHolder).bind(null);
+        ((LoadMoreVH) viewHolder).onBind(null);
 
     }
 

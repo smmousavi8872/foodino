@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.developer.smmousavi.foodino.R;
-import com.developer.smmousavi.foodino.viewholders.imageslider.ProductDetailSliderVH;
+import com.developer.smmousavi.foodino.ui.viewholders.imageslider.ProductDetailSliderVH;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
 import java.util.List;

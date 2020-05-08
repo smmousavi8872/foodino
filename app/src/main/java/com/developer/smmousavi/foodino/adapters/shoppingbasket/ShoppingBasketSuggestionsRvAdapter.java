@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import com.developer.smmousavi.foodino.R;
 import com.developer.smmousavi.foodino.models.Recipe;
-import com.developer.smmousavi.foodino.viewholders.shoppingbasket.ShoppingBasketSuggestionsVH;
+import com.developer.smmousavi.foodino.ui.viewholders.shoppingbasket.ShoppingBasketSuggestionsVH;
 
 import java.util.List;
 
@@ -19,6 +19,7 @@ public class ShoppingBasketSuggestionsRvAdapter extends RecyclerView.Adapter<Sho
 
     public void setItemList(List<Recipe> itemList) {
         mItemList = itemList;
+        notifyDataSetChanged();
     }
 
     public void emptyItemList() {
@@ -37,7 +38,7 @@ public class ShoppingBasketSuggestionsRvAdapter extends RecyclerView.Adapter<Sho
 
     @Override
     public void onBindViewHolder(@NonNull ShoppingBasketSuggestionsVH holder, int position) {
-        holder.bind(mItemList.get(position));
+        holder.onBind(mItemList.get(position));
 
     }
 
